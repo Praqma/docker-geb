@@ -1,6 +1,7 @@
 FROM selenium/standalone-firefox
 
 USER root
+RUN  adduser --disabled-password --gecos '' jenkins
 
 # Groovy install
 ENV         GROOVY_VERSION 2.4.3
@@ -16,6 +17,6 @@ RUN         apt-get update -qq -y && \
             apt-get clean && \
             rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY geb.groovy /home/seluser/
+COPY geb.groovy /home/jenkins/
 
 EXPOSE 4444

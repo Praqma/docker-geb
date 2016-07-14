@@ -11,5 +11,5 @@ import org.openqa.selenium.firefox.FirefoxDriver
 Browser.drive() {
     go "http://www.praqma.com"
     assert $(".site-header .phone").text() == "+45 36772 762";
-    //assert $(".site-header .phone").text() == "WRONG";
+    assert $(".site-header .phone").text() == "WRONG";
 }

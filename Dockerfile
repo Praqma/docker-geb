@@ -54,5 +54,8 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
 COPY run.sh /home/jenkins/
+RUN mkdir /home/jenkins/site
+RUN mkdir /home/jenkins/site/_site
+#RUN chmod 775 /home/jenkins/site/_site
 
 EXPOSE 4444

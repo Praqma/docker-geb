@@ -42,13 +42,12 @@ RUN gem install github-pages -v 51
 # setting a propper charset to avoid https://github.com/jekyll/jekyll/issues/4268
 #
 # Install program to configure locales
-RUN apt-get install -y locales
-RUN dpkg-reconfigure locales && \
-  locale-gen C.UTF-8 && \
-  /usr/sbin/update-locale LANG=C.UTF-8
+RUN dpkg-reconfigure locales
+RUN locale-gen C.UTF-8
+RUN /usr/sbin/update-locale LANG=C.UTF-8
 # Install needed default locale for Makefly
-RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen && \
-  locale-gen
+RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
+RUN locale-gen
 # Set default locale for the environment
 ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8

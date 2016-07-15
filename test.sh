@@ -1,1 +1,1 @@
-docker run --rm -t praqma/image-size-checker:snapshot groovy -v
+docker run --rm -t praqma/geb:snapshot groovy -v && jekyll --version

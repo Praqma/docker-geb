@@ -1,5 +1,6 @@
 #!/bin/bash
 cd /home/jenkins/site/
+ls -la
 
 # running `jekyll serve` in background
 exec 3< <(jekyll serve &)

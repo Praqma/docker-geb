@@ -1,6 +1,7 @@
 #!/bin/bash
 cd /home/jenkins/site/
-mkdir _site
+sudo mkdir _site
+sudo chmod 777 _site/
 ls -la
 
 # running `jekyll serve` in background

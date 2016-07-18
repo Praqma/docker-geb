@@ -1,5 +1,6 @@
 #!/bin/bash
 cd /home/jenkins/site/
+sudo rm -R ./_site
 sudo mkdir /home/jenkins/_site
 sudo chmod 777 /home/jenkins/_site/ -R
 
